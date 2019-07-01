@@ -32,7 +32,11 @@ public class ForwardOneServlet extends HttpServlet {
 		PrintWriter out = resp.getWriter();
 		out.println("Servlet1...before");
 		System.out.println("Servlet1...before");
-		req.getRequestDispatcher("/forward/s2").forward(req, resp);
+		//1、跳转
+		//req.getRequestDispatcher("/forward/s2").forward(req, resp);
+		
+		//2、访问WEB-INF中资源（只有forwar方式可以访问WEB-INF中的资源）
+		req.getRequestDispatcher("/WEB-INF/inWEBINF.jsp").forward(req, resp);
 		
 		out.println("Servlet1...after");
 		System.out.print("Servlet...after");
