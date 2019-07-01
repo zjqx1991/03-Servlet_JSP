@@ -38,8 +38,11 @@ public class ForwardOneServlet extends HttpServlet {
 		//2、访问WEB-INF中资源（只有forward方式可以访问WEB-INF中的资源）
 		//req.getRequestDispatcher("/WEB-INF/inWEBINF.jsp").forward(req, resp);
 		
-		//3、请求外部资源（forward方式无法请求外部资源）
-		req.getRequestDispatcher("/https://home.firefoxchina.cn/").forward(req, resp);
+		//3、访问WEB-INF之外的资源
+		req.getRequestDispatcher("/temp/out.jsp").forward(req, resp);
+		
+		//4、请求外部资源（forward方式无法请求外部资源）
+		//req.getRequestDispatcher("/https://home.firefoxchina.cn/").forward(req, resp);
 		
 		out.println("Servlet1...after");
 		System.out.print("Servlet...after");
