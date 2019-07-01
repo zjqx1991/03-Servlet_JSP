@@ -1,3 +1,5 @@
+<%@page import="java.util.Date"%>
+<%@page import="javax.xml.crypto.Data"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -8,5 +10,10 @@
 </head>
 <body>
 	WEB-INF中的资源
+	<%
+		String timeString = null;
+		timeString = new Date().toLocaleString();
+	%>
+	北京时间：<%=timeString %>
 </body>
 </html>

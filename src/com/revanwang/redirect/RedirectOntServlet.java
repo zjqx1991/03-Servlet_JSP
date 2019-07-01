@@ -35,7 +35,7 @@ public class RedirectOntServlet extends HttpServlet {
 		System.out.println("Servlet1......before");
 		
 		//1、URL重定向（界面跳转）
-		//resp.sendRedirect("/redirect/s2");
+		resp.sendRedirect("/redirect/s2");
 		
 		//2、无法请求WEB-INF中的资源
 		//resp.sendRedirect("/WEB-INF/inWEBINF.jsp");
@@ -43,8 +43,8 @@ public class RedirectOntServlet extends HttpServlet {
 		//3、请求项目中，WEB-INF之外的资源
 		//resp.sendRedirect("/temp/out.jsp");
 		
-		//4、请求项目之外的资源
-		resp.sendRedirect("https://home.firefoxchina.cn/");
+		//4、请求项目之外的资源（只有URL重定向可以访问项目之外的资源）
+		//resp.sendRedirect("https://home.firefoxchina.cn/");
 		
 		out.println("Servlet1......after");
 		System.out.println("Servlet1......after");
